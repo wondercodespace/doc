@@ -5,7 +5,7 @@ import random
 import string
 import bcrypt
 
-# Prüfen und Installieren der notwendigen Pakete
+# Prüfen und Installieren der notwendigen Pakete (Dies ist nicht zverlässig! Bitte zuvor manuell in der CMD Konsole instalieren -> pip install [bib name])
 def install(package):
     subprocess.check_call([sys.executable, "-m", "pip", "install", package])
 
@@ -70,7 +70,7 @@ def create_ticket(ticket_number, details, logo_path, personalized, buyer_info=No
 
     # Zeichne Hintergrund und Details
     d.rectangle([(0, 0), (600, 300)], fill=bg_color, outline=bg_color)
-    d.text((30, 20), "Eventim Ticket", fill=(255, 255, 255), font=ImageFont.truetype("arial.ttf", 24))
+    d.text((30, 20), "Ticket", fill=(255, 255, 255), font=ImageFont.truetype("arial.ttf", 24))
     d.line([(30, 60), (570, 60)], fill=(255, 255, 255), width=2)
 
     # Ticketnummer und Details
